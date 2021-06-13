@@ -2,7 +2,7 @@ import 'package:exercise_app/constraints.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class CategoryCard extends StatelessWidget {
+class CategoryCard extends StatelessWidget {    // home page category widget card
   final String svgSrc;
   final String title;
   final Function press;
@@ -17,7 +17,7 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(13),
-          child: Container(
+        child: Container(
         //padding: EdgeInsets.all(5),
         margin: EdgeInsets.all(10),
         decoration: BoxDecoration(

@@ -1,6 +1,8 @@
-import 'package:exercise_app/bottom_nav_item.dart';
-import 'package:exercise_app/category_card.dart';
 import 'package:exercise_app/constraints.dart';
+import 'package:exercise_app/screens/deatils_screen.dart';
+import 'package:exercise_app/widgets/bottom_nav_item.dart';
+import 'package:exercise_app/widgets/category_card.dart';
+import 'package:exercise_app/widgets/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -35,7 +37,7 @@ class HomeScreen extends StatelessWidget {
       return Scaffold(
         bottomNavigationBar: Container(
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-          height: 70,
+          height: 65,
           color: Colors.white,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -49,6 +51,7 @@ class HomeScreen extends StatelessWidget {
               BottomNavItem(
                 title: "All Exercises",
                 svgSrc: "assets/icons/gym.svg",
+                isActive: true,
               ),
               
               BottomNavItem(
@@ -107,21 +110,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
 
-                      Container(  // create search bar
-                        margin: EdgeInsets.symmetric(vertical: 30),
-                        padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(25), 
-                        ),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: "Search",
-                            icon: SvgPicture.asset("assets/icons/search.svg"),
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
+                      SearchBar(),
 
                       Expanded(
                           child: GridView.count(
@@ -147,13 +136,27 @@ class HomeScreen extends StatelessWidget {
                               CategoryCard(  // card 3
                                 title: "Meditation",
                                 svgSrc: "assets/icons/Meditation_women_small.svg",
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(
+                                      builder: (context) {return MediDetailsScreen();}
+                                    ),
+                                  ); 
+                                },
                               ),
 
                               CategoryCard(  // card 4
                                 title: "Yoga",
                                 svgSrc: "assets/icons/yoga.svg",
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(
+                                      builder: (conatext) {return YogaDetailsScreen();}
+                                    ),
+                                  );
+                                },
                               ),
 
                               // Container(                          // this is my own code part 
@@ -185,9 +188,6 @@ class HomeScreen extends StatelessWidget {
                             ],
                         ),
                       ),
-
-                      
-
                     ], 
                   ),
                 ),
@@ -198,5 +198,7 @@ class HomeScreen extends StatelessWidget {
   }
   
 }
+
+
 
 
