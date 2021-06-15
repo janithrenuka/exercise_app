@@ -1,6 +1,8 @@
+import 'package:exercise_app/main.dart';
+import 'package:exercise_app/screens/all_exercises.dart';
+import 'package:exercise_app/widgets/bottom_nav_item.dart';
 import 'package:exercise_app/widgets/setting_item.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class Settings extends StatelessWidget {
   final Function press;
@@ -20,7 +22,7 @@ class Settings extends StatelessWidget {
           SafeArea(
             child: InkWell(
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.symmetric(horizontal:20.0),
                 child: Column(
                   children: <Widget>[
                     Row(
@@ -32,9 +34,15 @@ class Settings extends StatelessWidget {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                          child: Icon(
-                              Icons.arrow_back,
-                              color: Colors.black,
+                          child: IconButton(
+                              icon: new Icon(Icons.arrow_back),
+                              color: Colors.black, 
+                              onPressed: () { 
+                                Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(builder: (context) {return HomeScreen();})
+                                );
+                              },
                           ),
                         ),
 
@@ -57,7 +65,7 @@ class Settings extends StatelessWidget {
                               child: GridView.count(
                                 
                               crossAxisCount: 2,
-                              childAspectRatio: 1.5,
+                              childAspectRatio: 1.75,
                               crossAxisSpacing: 8,
                               mainAxisSpacing: 8,
 
@@ -106,7 +114,42 @@ class Settings extends StatelessWidget {
             ),
           ),
         ],
-      )  
+      ),
+
+      bottomNavigationBar: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          height: 65,
+          color: Colors.white,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+
+              BottomNavItem(
+                title: "Today",
+                svgSrc: "assets/icons/calendar.svg",
+              ),
+              
+              BottomNavItem(
+                title: "All Exercises",
+                svgSrc: "assets/icons/gym.svg",
+                press: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                        builder: (context) {return AllExercise();}
+                    ),
+                  );
+                },
+              ),
+              
+              BottomNavItem(
+                title: "Settings",
+                svgSrc: "assets/icons/Settings.svg",
+                isActive: true,
+              ),
+            ],
+          ),
+      ),  
     );
   }
 }

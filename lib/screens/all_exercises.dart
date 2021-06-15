@@ -1,3 +1,4 @@
+import 'package:exercise_app/main.dart';
 import 'package:exercise_app/screens/settings.dart';
 import 'package:exercise_app/widgets/bottom_nav_item.dart';
 import 'package:exercise_app/widgets/detail_items.dart';
@@ -25,9 +26,15 @@ class AllExercise extends StatelessWidget {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                               ),
-                          child: Icon(
-                              Icons.arrow_back,
-                              color: Colors.black,
+                          child: IconButton(
+                              icon: new Icon(Icons.arrow_back),
+                              color: Colors.black, 
+                              onPressed: () { 
+                                Navigator.push(
+                                  context, 
+                                  MaterialPageRoute(builder: (context) {return HomeScreen();})
+                                );
+                              },
                           ),
                         ),
 
@@ -154,14 +161,6 @@ class AllExercise extends StatelessWidget {
                 title: "All Exercises",
                 svgSrc: "assets/icons/gym.svg",
                 isActive: true,
-                press: () {
-                  Navigator.push(
-                    context, 
-                    MaterialPageRoute(
-                        builder: (context) {return AllExercise();}
-                    ),
-                  );
-                },
               ),
               
               BottomNavItem(

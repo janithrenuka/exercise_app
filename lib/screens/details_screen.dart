@@ -1,4 +1,5 @@
 import 'package:exercise_app/constraints.dart';
+import 'package:exercise_app/main.dart';
 import 'package:exercise_app/screens/all_exercises.dart';
 import 'package:exercise_app/screens/settings.dart';
 import 'package:exercise_app/widgets/bottom_nav_item.dart';
@@ -36,19 +37,56 @@ class DietDetailsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start, 
                     children: <Widget>[
-                      Align( // add menu image align 
-                          alignment: Alignment.topRight,
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 52,  //image height & width
-                            width: 52,
-                            decoration: BoxDecoration(       // menu icon doesnt work
-                              //color: Colors.black,
-                              color: Color(0xFFF2BEA1),
-                              shape: BoxShape.circle, // crop image circly
+
+                      Row(
+                        children: [
+                          Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                              child: IconButton(
+                                  icon: new Icon(Icons.arrow_back),
+                                  color: Colors.black, 
+                                  onPressed: () { 
+                                    Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(builder: (context) {return HomeScreen();})
+                                    );
+                                  },
+                              ),
+                          ),
+
+                          Padding(
+                          //padding: const EdgeInsets.symmetric(vertical: 20.0,),
+                          padding: const EdgeInsets.fromLTRB(0.0, 20.0, 200.0, 20.0),
+                            child: Text(
+                              "Back",
+                              style: Theme.of(context)
+                                        .textTheme
+                                        .headline6
+                                        .copyWith(
+                                      fontWeight: FontWeight.w900
+                                      ),
                             ),
-                            child: SvgPicture.asset("assets/icons/menu.svg"), // href image
-                        ),
+                          ),
+                            
+                          Align( // add menu image align 
+                              alignment: Alignment.topRight,
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: 52,  //image height & width
+                                width: 52,
+                                decoration: BoxDecoration(       // menu icon doesnt work
+                                  //color: Colors.black,
+                                  color: Color(0xFFF2BEA1),
+                                  shape: BoxShape.circle, // crop image circly
+                                ),
+                                child: SvgPicture.asset("assets/icons/menu.svg"), // href image
+                            ),
+                          ),
+                        ],
                       ),
 
                       SizedBox(
@@ -163,11 +201,6 @@ class DietDetailsScreen extends StatelessWidget {
 
                         ),
                       ),
-                        Center(
-                          child: Icon(
-                            Icons.expand_more,
-                          ),
-                        ),
                     ]
                   ),
               ),
@@ -252,19 +285,56 @@ class KExerciseDetailsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start, 
                     children: <Widget>[
-                      Align( // add menu image align 
-                          alignment: Alignment.topRight,
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 52,  //image height & width
-                            width: 52,
-                            decoration: BoxDecoration(       // menu icon doesnt work
-                              //color: Colors.black,
-                              color: Color(0xFFF2BEA1),
-                              shape: BoxShape.circle, // crop image circly
+                      
+                      Row(
+                        children: [
+                          Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                              child: IconButton(
+                                  icon: new Icon(Icons.arrow_back),
+                                  color: Colors.black, 
+                                  onPressed: () { 
+                                    Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(builder: (context) {return HomeScreen();})
+                                    );
+                                  },
+                              ),
+                          ),
+
+                          Padding(
+                          //padding: const EdgeInsets.symmetric(vertical: 20.0,),
+                          padding: const EdgeInsets.fromLTRB(0.0, 20.0, 200.0, 20.0),
+                            child: Text(
+                              "Back",
+                              style: Theme.of(context)
+                                        .textTheme
+                                        .headline6
+                                        .copyWith(
+                                      fontWeight: FontWeight.w900
+                                      ),
                             ),
-                            child: SvgPicture.asset("assets/icons/menu.svg"), // href image
-                        ),
+                          ),
+                            
+                          Align( // add menu image align 
+                              alignment: Alignment.topRight,
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: 52,  //image height & width
+                                width: 52,
+                                decoration: BoxDecoration(       // menu icon doesnt work
+                                  //color: Colors.black,
+                                  color: Color(0xFFF2BEA1),
+                                  shape: BoxShape.circle, // crop image circly
+                                ),
+                                child: SvgPicture.asset("assets/icons/menu.svg"), // href image
+                            ),
+                          ),
+                        ],
                       ),
 
                       SizedBox(
@@ -468,19 +538,56 @@ class MediDetailsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start, 
                     children: <Widget>[
-                      Align( // add menu image align 
-                          alignment: Alignment.topRight,
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 52,  //image height & width
-                            width: 52,
-                            decoration: BoxDecoration(       // menu icon doesnt work
-                              //color: Colors.black,
-                              color: Color(0xFFF2BEA1),
-                              shape: BoxShape.circle, // crop image circly
+                      
+                      Row(
+                        children: [
+                          Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                              child: IconButton(
+                                  icon: new Icon(Icons.arrow_back),
+                                  color: Colors.black, 
+                                  onPressed: () { 
+                                    Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(builder: (context) {return HomeScreen();})
+                                    );
+                                  },
+                              ),
+                          ),
+
+                          Padding(
+                          //padding: const EdgeInsets.symmetric(vertical: 20.0,),
+                          padding: const EdgeInsets.fromLTRB(0.0, 20.0, 200.0, 20.0),
+                            child: Text(
+                              "Back",
+                              style: Theme.of(context)
+                                        .textTheme
+                                        .headline6
+                                        .copyWith(
+                                      fontWeight: FontWeight.w900
+                                      ),
                             ),
-                            child: SvgPicture.asset("assets/icons/menu.svg"), // href image
-                        ),
+                          ),
+                            
+                          Align( // add menu image align 
+                              alignment: Alignment.topRight,
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: 52,  //image height & width
+                                width: 52,
+                                decoration: BoxDecoration(       // menu icon doesnt work
+                                  //color: Colors.black,
+                                  color: Color(0xFFF2BEA1),
+                                  shape: BoxShape.circle, // crop image circly
+                                ),
+                                child: SvgPicture.asset("assets/icons/menu.svg"), // href image
+                            ),
+                          ),
+                        ],
                       ),
 
                       SizedBox(
@@ -708,19 +815,56 @@ class YogaDetailsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start, 
                     children: <Widget>[
-                      Align( // add menu image align 
-                          alignment: Alignment.topRight,
-                          child: Container(
-                            alignment: Alignment.center,
-                            height: 52,  //image height & width
-                            width: 52,
-                            decoration: BoxDecoration(       // menu icon doesnt work
-                              //color: Colors.black,
-                              color: Color(0xFFF2BEA1),
-                              shape: BoxShape.circle, // crop image circly
+                      
+                      Row(
+                        children: [
+                          Container(
+                                  height: 50,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                  ),
+                              child: IconButton(
+                                  icon: new Icon(Icons.arrow_back),
+                                  color: Colors.black, 
+                                  onPressed: () { 
+                                    Navigator.push(
+                                      context, 
+                                      MaterialPageRoute(builder: (context) {return HomeScreen();})
+                                    );
+                                  },
+                              ),
+                          ),
+
+                          Padding(
+                          //padding: const EdgeInsets.symmetric(vertical: 20.0,),
+                          padding: const EdgeInsets.fromLTRB(0.0, 20.0, 200.0, 20.0),
+                            child: Text(
+                              "Back",
+                              style: Theme.of(context)
+                                        .textTheme
+                                        .headline6
+                                        .copyWith(
+                                      fontWeight: FontWeight.w900
+                                      ),
                             ),
-                            child: SvgPicture.asset("assets/icons/menu.svg"), // href image
-                        ),
+                          ),
+                            
+                          Align( // add menu image align 
+                              alignment: Alignment.topRight,
+                              child: Container(
+                                alignment: Alignment.center,
+                                height: 52,  //image height & width
+                                width: 52,
+                                decoration: BoxDecoration(       // menu icon doesnt work
+                                  //color: Colors.black,
+                                  color: Color(0xFFF2BEA1),
+                                  shape: BoxShape.circle, // crop image circly
+                                ),
+                                child: SvgPicture.asset("assets/icons/menu.svg"), // href image
+                            ),
+                          ),
+                        ],
                       ),
 
                       SizedBox(

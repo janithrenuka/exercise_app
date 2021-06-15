@@ -42,7 +42,7 @@ class SettingItem extends StatelessWidget {
           child: InkWell( //add hover color on tap
             onTap: press,
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 0,),
+                padding: const EdgeInsets.symmetric(vertical: 5,),
                 
                 child: Row(
                   children: <Widget>[
@@ -57,6 +57,7 @@ class SettingItem extends StatelessWidget {
                           Icons.settings,
                           color: Colors.white,
                         ),
+
                     ),
 
                     SizedBox(
