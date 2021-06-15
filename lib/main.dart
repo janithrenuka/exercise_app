@@ -1,5 +1,7 @@
 import 'package:exercise_app/constraints.dart';
-import 'package:exercise_app/screens/deatils_screen.dart';
+import 'package:exercise_app/screens/all_exercises.dart';
+import 'package:exercise_app/screens/details_screen.dart';
+import 'package:exercise_app/screens/settings.dart';
 import 'package:exercise_app/widgets/bottom_nav_item.dart';
 import 'package:exercise_app/widgets/category_card.dart';
 import 'package:exercise_app/widgets/search_bar.dart';
@@ -52,11 +54,27 @@ class HomeScreen extends StatelessWidget {
                 title: "All Exercises",
                 svgSrc: "assets/icons/gym.svg",
                 isActive: true,
+                press: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                        builder: (context) {return AllExercise();}
+                    ),
+                  );
+                },
               ),
               
               BottomNavItem(
                 title: "Settings",
                 svgSrc: "assets/icons/Settings.svg",
+                press: () {
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(
+                        builder: (context) {return Settings();}
+                    ),
+                  );
+                },
               ),
             ]
             
@@ -124,13 +142,27 @@ class HomeScreen extends StatelessWidget {
                               CategoryCard(  // card 1
                                 title: "Diet Recommendation",
                                 svgSrc: "assets/icons/Hamburger.svg",
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(
+                                      builder: (context) {return DietDetailsScreen();}
+                                    ), 
+                                  );
+                                },
                               ),
 
                               CategoryCard(  // card 2
                                 title: "Kegel Exercises",
                                 svgSrc: "assets/icons/Excrecises.svg",
-                                press: () {},
+                                press: () {
+                                  Navigator.push(
+                                    context, 
+                                    MaterialPageRoute(
+                                      builder: (context) {return KExerciseDetailsScreen();}
+                                    ),
+                                  ); 
+                                },
                               ),
 
                               CategoryCard(  // card 3

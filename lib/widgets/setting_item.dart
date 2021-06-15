@@ -1,15 +1,19 @@
 import 'package:exercise_app/constraints.dart';
 import 'package:flutter/material.dart';
 
-class MediItem extends StatelessWidget {
+// items for meditation
+
+class SettingItem extends StatelessWidget {
   final String title;
+  final String icon;
   final Function press;
   final bool isActive;
-  const MediItem({
+  const SettingItem({
     Key key, 
     this.title, 
     this.press, 
-    this.isActive = false
+    this.isActive = false, 
+    this.icon
   }) : super(key: key);
 
   @override
@@ -38,7 +42,7 @@ class MediItem extends StatelessWidget {
           child: InkWell( //add hover color on tap
             onTap: press,
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                padding: const EdgeInsets.symmetric(vertical: 0,),
                 
                 child: Row(
                   children: <Widget>[
@@ -50,7 +54,7 @@ class MediItem extends StatelessWidget {
                           shape: BoxShape.circle,
                         ),
                         child: Icon(
-                          Icons.play_arrow,
+                          Icons.settings,
                           color: Colors.white,
                         ),
                     ),
@@ -62,36 +66,11 @@ class MediItem extends StatelessWidget {
                       title,
                       style: Theme.of(context)
                             .textTheme
-                            .subtitle2
+                            .headline5
                             
                     ),
                   ],
                 ),
-
-                // child: Text.rich(
-                //   TextSpan(
-                    
-                //     children: [
-                //       WidgetSpan(
-                        
-                //         //child: SvgPicture.asset(svgSrc),
-                //         child: Icon(
-                //           Icons.play_arrow,
-                //           color: KBlueColor,
-                //         )
-                //       ),
-
-                //       TextSpan(
-                //         text: title,
-                //         style: Theme.of(context)
-                //         .textTheme
-                //         .headline6
-                //         .copyWith(fontSize: 16, fontWeight: FontWeight.bold),
-                //       )
-                //     ],
-                //   ),
-                // )
-
               ),
           ),
         ),
