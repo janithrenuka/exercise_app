@@ -1,8 +1,15 @@
 # exercise_app
 
-A new Flutter project.
+<h3><b>Simple flutter UI design for exercise workout.</b></h3>
 
-## Getting Started
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/1.png" align="left" height="300" width="150">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/2.png" align="left" height="300" width="150">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/3.png" align="left" height="300" width="150">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/4.png" align="left" height="300" width="150">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/5.png" align="left" height="300" width="150">
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+##  Getting Started
 
 This project is a starting point for a Flutter application.
 
