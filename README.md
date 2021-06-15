@@ -2,11 +2,11 @@
 
 <h3><b>Simple flutter UI design for exercise workout.</b></h3>
 
-<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/1.png" align="left" height="300" width="150">
-<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/2.png" align="left" height="300" width="150">
-<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/3.png" align="left" height="300" width="150">
-<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/4.png" align="left" height="300" width="150">
-<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/5.png" align="left" height="300" width="150">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/1.png" align="left" height="280" width="120">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/2.png" align="left" height="280" width="120">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/3.png" align="left" height="280" width="120">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/4.png" align="left" height="280" width="120">
+<img src="https://github.com/janithrenuka/exercise_app/blob/main/assets/ss/5.png" align="left" height="280" width="120">
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
 ##  Getting Started
