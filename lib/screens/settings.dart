@@ -66,8 +66,8 @@ class Settings extends StatelessWidget {
                                 
                               crossAxisCount: 2,
                               childAspectRatio: 1.75,
-                              crossAxisSpacing: 8,
-                              mainAxisSpacing: 8,
+                              crossAxisSpacing: 10,
+                              mainAxisSpacing: 10,
 
                                 children: <Widget>[
                                   
